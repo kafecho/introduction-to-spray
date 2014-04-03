@@ -11,6 +11,7 @@ import scala.concurrent.Await
 
 object AsyncHttpClient extends App {
   implicit val system = ActorSystem()
+
   import system.dispatcher
 
   val pipeline: HttpRequest => Future[HttpResponse] = sendReceive
@@ -18,7 +19,9 @@ object AsyncHttpClient extends App {
   val future = pipeline(Get("http://www.news24.com"))
   
   future.onComplete{
-    case Success(response) => println (response.entity.data.asString)
+    case Success(response) => 
+      val html = response.entity.data.asString
+      println (html)
     case Failure(ex) => System.err.println(s"An error occured while executing the Http request: $ex.")
   }
 }
