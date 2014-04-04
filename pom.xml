@@ -49,6 +49,34 @@
 		</dependency>
 
 		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.10</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>io.spray</groupId>
+			<artifactId>spray-testkit</artifactId>
+			<version>${spray.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.scalatest</groupId>
+			<artifactId>scalatest_2.10</artifactId>
+			<version>1.9.1</version>
+			<scope>test</scope>
+		</dependency>
+
+
+		<dependency>
+			<groupId>io.spray</groupId>
+			<artifactId>spray-json_2.10</artifactId>
+			<version>1.2.5</version>
+		</dependency>
+
+		<dependency>
 			<groupId>io.spray</groupId>
 			<artifactId>spray-httpx</artifactId>
 			<version>${spray.version}</version>
