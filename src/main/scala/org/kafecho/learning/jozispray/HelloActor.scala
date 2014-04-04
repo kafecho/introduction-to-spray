@@ -17,7 +17,8 @@ object MeaningOfLife {
 class MeaningOfLife extends Actor {
   import MeaningOfLife._
   def receive = {
-    case WhatIsTheMeaningOfLife => sender ! Answer(42)
+    case WhatIsTheMeaningOfLife =>
+      sender ! Answer(42)
   }
 }
 
